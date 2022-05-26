@@ -57,8 +57,8 @@ android {
 
     defaultConfig {
         // TODO: Specify your own unique Application ID (https://developer.android.com/studio/build/application-id.html).
-        applicationId "com.example.flangapp_app"
-        minSdkVersion localProperties.getProperty('flutter.minSdkVersion').toInteger()
+        applicationId "app.codecanyon.net"
+        minSdkVersion 17
         targetSdkVersion flutter.targetSdkVersion
         versionCode flutterVersionCode.toInteger()
         versionName flutterVersionName
@@ -69,7 +69,7 @@ android {
         release {
             storeFile file("sign/key.jks")
             storePassword "EMrNEJbNkbPs"
-            keyAlias "tadapp_android_e"
+            keyAlias "tadapp_android_20"
             keyPassword "EMrNEJbNkbPs"
         }
     }
