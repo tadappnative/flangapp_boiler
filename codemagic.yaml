@@ -1,30 +1,54 @@
 workflows:
-  android-workflow:
-    name: SiteNative Android apk
+  ios-workflow:
+    name: SiteNative iOS without OneSignal
     max_build_duration: 30
     environment:
       vars:
-        PACKAGE_NAME: "app.codecanyon.net"
+        XCODE_WORKSPACE: "Runner.xcworkspace"
+        XCODE_SCHEME: "Runner"
+        APP_STORE_CONNECT_ISSUER_ID: 544b51d2-e0fc-45b4-b776-025e9cf47601
+        APP_STORE_CONNECT_KEY_IDENTIFIER: 544b51d2-e0fc-45b4-b776-025e9cf47601
+        APP_STORE_CONNECT_PRIVATE_KEY: |-
+         -----BEGIN PRIVATE KEY-----
+         MIGTAgEAMBMGByqGSM49AgEGCCqGSM49AwEHBHkwdwIBAQQgNW/hVUuRMjEuykat
+         9/xvLMBGmd6Jx9LcQGYrf2cPMdWgCgYIKoZIzj0DAQehRANCAASfnd/PlmKsFzn0
+         Amhpx4a8a26HtPBJalIFpGemAbmEho978RvCG9Ixcj0H3nttgnBY72Tv7UT7kQEo
+         DrvUBu0o
+         -----END PRIVATE KEY-----
+
+        CERTIFICATE_PRIVATE_KEY: Encrypted(Z0FBQUFBQmhIN3R0S3ZkSGEyVkhVSUJsNU9Ld0dFYlNzU1VySVd4LU9nSUJfTXh0RFQzeEp5YW9zMTV6MDZtREVFVXUyWU4wdjlZdW40a1pnaHNKeFFrellXX196ekRtSEFzX3VCblQ4aWFsd3NtZDA2YTh3SERISDgybXh6VjVST0dRR25wN0ZZa05XOWtUZElTQWZSME5iS0ZydW5uejVwU2s2VUZ6NTg3RWludEg2RVF5Qnd6cl92cHhiT1otTVA2QlRqdzJ5aUpCSExQZUZwRnNQdFhuMVl4N0NQbU9rejB5Q2hrWXpaNlF3cy1oVG44UDh1elM4UEJrVUwyVFYteDBLdGRPUjNVSjFxOVpzQlg4cGx5d3k4a1JHdjRUQzJzdUZ4MHFYVEEwbFdFek5uTThXM3lBUWZudTBuQXlZNzhaall2RF9WQ0MtU19MdWNwa3czejV2Q0VnbGJwN1FqYkxxQnJGZkJiWm02ZENFUm5DM3I0R1VwYnBRS252WjBKNkhwdXltaEpIN0dRMDNJMmVuNEpUaHFfOUxsdjJ6RlYtOGV1RzhDS3hpdzBCUDBHckMtZG1QUHIzV1U4c2R0bTJIbXBfMVNZclItVDlqOGVwTFJ0TTgxMV9TbmZCUjRkTi1wRXA4azZTbk1OWU8xWVFVQkFqWGVFRkFpOFdQRVZobDh0TXBxOWNRcGs3MWN1akRKNXo0LW1NSW5MY1lDaE84djVqTGU2UnNTSmZiOTEtUVJHaGdoTlZVRHFjaDRsMmhDRGk0VFZhV05rZjhkUFJiZ0xmYk5JOHF5ZkJwYTB6SnhFU0lDT25YLWdUbjhDaWpCczZ4SHk3aElLbzVONVBGRERsX0tjS19TYU1xUXBjTzZ2dFdiQWh4amsydkNSMElqM0toUi1CX2p1bVBtRWVFdnRGOHJyN0xuRkNuLUV1ZnNYZEpsLWhDMFdhVG13R0tzc3A2SFc0Wk8tRE9XZE04WVhfRkZ0cGhVZ09kUlNrOURSa2V5MEpWR194ZVNCamJtNWJYVTEzenpnZkJJM0RlSHdrcEdmMzR6XzFGVlJNSmdIUmp4Q2x6ZW5ERTlRbno0TXM3X0JVQlF3NW8wbG5QS1ZESkdMbGJsemNWaFpHMXRyX2ZLYm5CaFc5dUJwcGJUUE5wQ1ZpZjBTclJTSmtySWFZUlFEZEozNWdhQUpGNVpMSjlldlF6RG5kTHdDVGhub1dGZWxZTU80Rm5senl6ZnlZSVRIb0pON3pyalI3WXR1U2JlM0FjUktlZW8yWGdtcXplcF9yV3FWSVcwbVE1UkdpQkwtTjRCX2psQjZGQVA1emM5c0gzam5DQ0VNY2lRTHZubTNJc3lRMG8zQmVLSXdlbEJBZ0w0RXA1YjBGQnlYanl6MlFkTmZ2NnVBNVpGamw1MXl1cGhlaVVsYWYyaUpRRXZJN25sTlFfT3hyVUVka0hQUUZtb2tjUnhVY3YxWVZaTDZVanBSUDFUNDlvTjRPekplNnIzdFBQSHdzZnYyT3JreWlBOTcwekxsWG5aVTBwVmNEMkRIMUpjSDJ1NU0xYXE0Yjc2eGpyV2tlUmhNeEZkUHVUclV2cUVXRmdXajl2ZHhvWmpocEdQeWd2bldSbXBsb21BNE9IaUhOTFNlck1FOFZnaW4yLWJGNUtMU2k0cFg2UE11b0IwZ0l1WmFpc0U0WTEyYTJnRFhIVjNFTlh0c2lFUVVPQXpqbUVPWWNFSDY5WFZaaVFMdlBIb1YyVlNYWlN2LU81SDFWM1VYRGVnY3YwckFUbjFBSzdrQk9aM2pKd09GVGtxVzBwR2JoUVg2ZDNzN3VjcjRVZVJoM2JBNDJGX1VCTnNQeG5Ba0RTM2lUaG5JcTZFRnl3UHZwZGpfUEVEenFoRlNPWHI5blA4dTlLNndMTWJidkRyN3NKV2J3czBOcjNQWDltbzBnaFNxNG9FR0kwd3ZjTU14V2p1RjBaQWNBX3g3SXRyQzVUVzVvN3JlRFJhckQ4dWJWbF9KUC1DWnlhTWFwUS1TU2ltMVEzdl84Uzd4Q3lhaDB0bXFrZzdiOFhUTVM0VE9TOXUyU3Z6RmRFQUZEclFndEo0TkE0aWk2czFMU1NCcEZkSFhObXVYQ3BicEZtNVYwRlUtQlhwSTJJUFlqSW5KRWExUGVKc0JSazJqM1JUdDE3OVB4akxEenFwVU9wZlhsUGdjYV8wWF93NnR2YWZSbnJ2V1F6Y2hVYU5qMHhONlltbEI1aFlGU0tyUTE1cVpjLXVyTTRISTB6VzgyYWYtRUFtYjhZMVlibUp3aFJsOHVPUVNZZDR3ZUd1S24taFZGeUpNMFA3QUE3ZXhJYmx0RFNLOTdxeVhTS0JxLWdTbFE0LXplOFY2OEtQOTRSdzBaeWZkYy1WLXVlVk10c1hjRDN5Z3d2dEdoNlhHTjF4aERFSzdpYWFxTEgxcGh5bnJkZWRmc1dBOWZMVjFaVEZ5UHhWZGU0Y1FpOTJEbjFPSjF5RXpsVjFHVDN2VVZUSWk4TFlMY215ZU5mZVJsWS1vMUhFYWRzalpIc0x1cUJKZTM3Q0hMeUY3X1d2eks0Y3paVElpNlVXbl9vZ1JMZFZZb2xxUUZaaVBHdjZxUjdvYmU0NFJlRV90WGd0SmZ4VUR0ZjVBa000SHk4QXBOc3pJNjVGVTV4TjZBdWRfck9VYWtWWWVITW5HQnRJMG45NjBwcTUtTHBIU0phcTA2UDhfN0RJNGtub3FXUzBrdmZISzVJeVZ5X1RkRkUyS0w3ak5LVndQbmN1MGJyckp0bW1fcEhPQlVyZjhrOG5ld1c5alpzUGxLcFJaZ25oSFVRWGM5emNEMnZHNUU5VEJDeXlGYWJadlk3U3pVS0V0LXlUaGRPbndXWmY1UjlySlZIQmpRUmQzb0xPLVhsTGtMTXNROXY2NmhxTmdSYnVKU1VoVnRtNFBUSGZYWEp6bU9rSVBfemhpcmlDU2RueU1YUGtyNWJfTFlkLVVxOU1hVWpYUnlUYjNfOEpGT2dVclFpUVRKcUNnb290WmQ1RkI1VTdyRHlKRTJYZzZLdEFNM015OTJTSU5p)
+        BUNDLE_ID: "app.codecanyon.net"
       flutter: stable
       xcode: latest
       cocoapods: default
     scripts:
-      - name: Set up local.properties
+      - name: Set up keychain to be used for codesigning using Codemagic CLI 'keychain' command
         script: |
-          echo "flutter.sdk=$HOME/programs/flutter" > "$FCI_BUILD_DIR/android/local.properties"
+          keychain initialize
+      - name: Fetch signing files
+        script: |
+          app-store-connect fetch-signing-files $BUNDLE_ID --type IOS_APP_STORE --create --log-api-calls --verbose
+      - name: Use system default keychain
+        script: |
+          keychain add-certificates
+      - name: Set up code signing settings on Xcode project
+        script: |
+          xcode-project use-profiles
       - name: Get Flutter packages
         script: |
           cd . && flutter packages pub get
       - name: Install pods
         script: |
           find . -name "Podfile" -execdir pod install \;
-      - name: Build APK with Flutter
+      - name: Flutter build ipa and automatic versioning
         script: |
-          cd . && flutter build apk --release --build-name=1.0.0 --build-number=$(($(google-play get-latest-build-number --package-name "$PACKAGE_NAME" --tracks="$GOOGLE_PLAY_TRACK") + 1))
+          flutter build ipa --release \
+          --build-name=1.0.0 \
+          --build-number=$(($(app-store-connect get-latest-testflight-build-number "$APP_STORE_ID") + 1)) \
+          --export-options-plist=/Users/builder/export_options.plist
     artifacts:
-      - build/**/outputs/**/*.apk
-      - build/**/outputs/**/*.aab
-      - build/**/outputs/**/mapping.txt
+      - build/ios/ipa/*.ipa
+      - /tmp/xcodebuild_logs/*.log
       - flutter_drive.log
     publishing:
       scripts:
