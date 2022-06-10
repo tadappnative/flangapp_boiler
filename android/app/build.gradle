@@ -68,9 +68,9 @@ android {
     signingConfigs {
         release {
             storeFile file("sign/key.jks")
-            storePassword "qwe123qwe"
-            keyAlias "key0"
-            keyPassword "qwe123qwe"
+            storePassword "12345678"
+            keyAlias "upload-keystore"
+            keyPassword "12345678"
         }
     }
 
