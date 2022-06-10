@@ -69,7 +69,7 @@ android {
         release {
             storeFile file("sign/key.jks")
             storePassword "admin@2020"
-            keyAlias "Videmak Tech Industries"
+            keyAlias "sserunjogi emmanuel"
             keyPassword "admin@2020"
         }
     }
