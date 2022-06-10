@@ -68,9 +68,9 @@ android {
     signingConfigs {
         release {
             storeFile file("sign/key.jks")
-            storePassword "EMrNEJbNkbPs"
-            keyAlias "tadapp_android_20"
-            keyPassword "EMrNEJbNkbPs"
+            storePassword "admin@2020"
+            keyAlias "Videmak Tech Industries"
+            keyPassword "admin@2020"
         }
     }
 
