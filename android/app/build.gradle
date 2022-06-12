@@ -68,9 +68,9 @@ android {
     signingConfigs {
         release {
             storeFile file("sign/key.jks")
-            storePassword "admin@2020"
-            keyAlias "Videmak Tech Industries"
-            keyPassword "admin@2020"
+            storePassword "12345678"
+            keyAlias "upload-keystore"
+            keyPassword "12345678"
         }
     }
 
