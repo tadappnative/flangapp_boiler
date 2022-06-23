@@ -69,7 +69,7 @@ android {
         release {
             storeFile file("sign/key.jks")
             storePassword "EMrNEJbNkbPs"
-            keyAlias "aab_tadapp_20"
+            keyAlias "tadapp_android_20"
             keyPassword "EMrNEJbNkbPs"
         }
     }
